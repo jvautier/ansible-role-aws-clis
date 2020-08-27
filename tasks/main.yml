@@ -1,0 +1,14 @@
+---
+- name: Include ansible_distribution and ansible_os_family tasks
+  include: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution | lower }}.yml"
+    - "{{ ansible_os_family | lower }}.yml"
+
+- name: Install pip3 packages
+  pip:
+    name: "{{ item }}"
+    executable: pip3
+  loop:
+    - awscli=={{ aws_cli_version }}
+    - aws-sam-cli=={{ aws_sam_version }}
