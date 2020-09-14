@@ -1,0 +1,9 @@
+---
+# See https://github.com/jvautier/project-cli
+fullname: jvautier/ansible-role-aws-clis
+description: Install aws clients through ansible
+tags:
+  - ansible
+  - ansible-role
+  - aws
+github: {}
