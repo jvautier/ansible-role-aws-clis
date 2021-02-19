@@ -11,4 +11,4 @@
     executable: pip3
   loop:
     - awscli=={{ aws_cli_version }}
-    - aws-sam-cli=={{ aws_sam_version }}
+    # - aws-sam-cli=={{ aws_sam_version }}
